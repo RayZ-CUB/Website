@@ -1,0 +1,55 @@
+<%- include('../partials/header') %>
+<%- include('../partials/menu') %>
+    <div class="container">
+        <h1>
+            <div class="jumbotron">
+                <h1>Rude Nails Banner Image</h1> 
+            </div>
+        </h1>
+		<div class="col-4">
+			<div class="card">
+				<!-- TODO: Modify the ejs code below, to conditionally set the image_src to be from our chosen player -->
+				<img class="card-img-top" id="product_img" src="<%+ '+ productinfo.img_src_nails +' %>" alt="Image of Nail Product">
+				<div class="card-body mx-auto">
+					<form class="form" action="/singleProduct/select" method="get">
+						<select class="custom-select" name="product_choice" onchange="this.form.submit()">
+							<option selected>Select Product</option>
+							<!-- TODO: Populate our select with player options
+                                        For each player, set a new option with a value matching the palyer's id,
+                                        but will display the player's name-->
+							<%
+							if (products) {
+								var options = '';
+								products.forEach(function(item){
+									options += "<option value=" + item.product_id + ">" + item.product_name + "</option>"
+								}); %>
+							<%- options %>
+							<% } %>
+						</select>
+					</form>
+
+				
+			
+					<form action="/singleProduct/select" method="get">
+						<!-- TODO: Second EJS Update 	-->
+						<%
+						if (data) {
+							var buttons = '';
+							data.forEach(function(item){
+								   buttons += '<button type="submit" name="product_name" class="btn btn-block" >';
+									 if(item.product_name){
+									   buttons += item.product_name + '</button>';
+									 }
+									 else{
+										 buttons += item.productinfo+ '</button>';
+									 }
+							   }); %>
+							   <%- buttons %>
+						<% } %>
+				  </form>
+
+
+				</div>
+			</div>
+		</div>
+<%- include('../partials/footer') %>

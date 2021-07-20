@@ -1,0 +1,116 @@
+/* About Me Page */
+.image-txt-container {
+  display: flex;
+  align-items: top;
+  flex-direction: row;
+}
+
+.right-text-container {
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Footer */
+#page-container {
+  position: relative;
+  min-height: 15vh;
+}
+
+#content-wrap {
+  padding-bottom: 20px;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;       /* Footer height */
+}
+
+.copywrite{
+  font-size: smaller;
+  font-family:'Poppins',sans-serif;
+  text-align: center;
+}
+
+/*Social Media Buttons*/
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 55px;
+  text-align: match-parent;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-youtube {
+  background: #5d5d5d;
+  color: white;;
+}
+
+.fa-instagram {
+  background: #5d5d5d;
+  color: white;
+}
+
+.fa-twitter {
+  background: #5d5d5d;
+  color: white;
+}
+
+/* Clickable Image */
+image {
+  float: auto; 
+  width: 20%; 
+  height: 90mm; 
+  margin-right: 2%; 
+  margin-bottom: 0.5em;
+}
+
+.pictures:hover{
+  height: auto;
+  width: 100%;
+  opacity: 0.3;
+}
+/* Home page */
+.centered{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+/* Cart Icon CSS */
+.itemsInCart{
+  font-size:1.8em;
+  padding:5px;
+}
+
+/* Navigation Bar */
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+  font-family:'Poppins',sans-serif;
+  font-weight: bold;
+  border: 4cm;
+  color: black;
+}
+.navbar ul{
+  background-color: rgb(255, 255, 255);
+  border-width: thin;
+  border-style: solid;
+  border-color: #9b59b6;
+  border-radius:5px;
+  border-bottom-width: 2px
+}
+.nav-item{
+  color: black;
+}
+
